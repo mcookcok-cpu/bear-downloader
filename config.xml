@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.bear.downloader" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Bear Downloader</name>
+    <description>
+        Aplikasi webview Cordova dengan fitur downloader file, text-to-speech,
+        pull-to-refresh navbar, dan mode desktop. Dibuat oleh BearAi.
+    </description>
+    <author email="bear@local" href="https://github.com">
+        BearAi
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="22" />
+    <preference name="android-targetSdkVersion" value="33" />
+    <preference name="Orientation" value="default" />
+    <preference name="Fullscreen" value="false" />
+    <preference name="BackgroundColor" value="0xff8B5E3C" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#8B5E3C" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="AndroidInsecureFileModeEnabled" value="true" />
+
+    <engine name="android" spec="^12.0.0" />
+
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
+    <plugin name="cordova-plugin-statusbar" spec="^3.0.0" />
+    <plugin name="cordova-plugin-splashscreen" spec="^6.0.2" />
+    <plugin name="cordova-plugin-file" spec="^8.0.0" />
+    <plugin name="cordova-plugin-file-transfer" spec="^2.0.0" />
+
+    <platform name="android">
+        <icon density="ldpi" src="res/icon/android/ldpi.png" />
+        <icon density="mdpi" src="res/icon/android/mdpi.png" />
+        <icon density="hdpi" src="res/icon/android/hdpi.png" />
+        <icon density="xhdpi" src="res/icon/android/xhdpi.png" />
+        <icon density="xxhdpi" src="res/icon/android/xxhdpi.png" />
+        <icon density="xxxhdpi" src="res/icon/android/xxxhdpi.png" />
+    </platform>
+</widget>

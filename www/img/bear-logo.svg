@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circle -->
+  <circle cx="100" cy="105" r="85" fill="#8B5E3C" />
+  
+  <!-- inner ears -->
+  <circle cx="60" cy="55" r="22" fill="#8B5E3C" />
+  <circle cx="140" cy="55" r="22" fill="#8B5E3C" />
+  <circle cx="60" cy="55" r="12" fill="#D4A574" />
+  <circle cx="140" cy="55" r="12" fill="#D4A574" />
+  
+  <!-- Face highlight -->
+  <ellipse cx="100" cy="115" rx="60" ry="55" fill="#D4A574" />
+  
+  <!-- Eyes -->
+  <circle cx="80" cy="100" r="7" fill="#1a1a1a" />
+  <circle cx="120" cy="100" r="7" fill="#1a1a1a" />
+  <circle cx="82" cy="98" r="2" fill="#fff" />
+  <circle cx="122" cy="98" r="2" fill="#fff" />
+  
+  <!-- Nose -->
+  <ellipse cx="100" cy="125" rx="8" ry="6" fill="#1a1a1a" />
+  <ellipse cx="100" cy="127" rx="3" ry="2" fill="#fff" opacity="0.4" />
+  
+  <!-- Mouth -->
+  <path d="M 100 131 Q 92 140 85 135" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linecap="round" />
+  <path d="M 100 131 Q 108 140 115 135" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linecap="round" />
+  
+  <!-- Cheeks -->
+  <circle cx="65" cy="120" r="6" fill="#E8A0A0" opacity="0.6" />
+  <circle cx="135" cy="120" r="6" fill="#E8A0A0" opacity="0.6" />
+</svg>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+  <title>Bear Downloader</title>
+  <link rel="icon" type="image/svg+xml" href="img/bear-logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Pull-to-refresh indicator -->
+  <div class="ptr-indicator" id="ptrIndicator">
+    <div class="ptr-spinner"></div>
+  </div>
+
+  <!-- App header / Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-left">
+      <img src="img/bear-logo.svg" alt="Bear Logo" class="nav-logo">
+      <h1 class="nav-title">Bear Downloader</h1>
+    </div>
+    <div class="nav-right">
+      <button class="mode-toggle" id="modeToggle" title="Toggle Desktop Mode">
+        <span class="mode-icon" id="modeIcon">📱</span>
+      </button>
+      <button class="refresh-btn" id="refreshBtn" title="Refresh">🔄</button>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container">
+    <!-- Downloader Card -->
+    <section class="card">
+      <div class="card-header">
+        <img src="img/bear-logo.svg" alt="Bear" class="card-icon">
+        <h2>File Downloader</h2>
+      </div>
+      <div class="card-body">
+        <label for="fileUrl">URL File:</label>
+        <input type="url" id="fileUrl" placeholder="https://example.com/file.pdf" value="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">
+        
+        <label for="fileName">Nama File (opsional):</label>
+        <input type="text" id="fileName" placeholder="my-file.pdf">
+        
+        <button class="btn btn-primary" id="downloadBtn">
+          ⬇️ Download File
+        </button>
+        
+        <div class="progress-container" id="progressContainer" style="display:none;">
+          <div class="progress-bar" id="progressBar"></div>
+          <span class="progress-text" id="progressText">0%</span>
+        </div>
+        
+        <div class="status" id="downloadStatus"></div>
+      </div>
+    </section>
+
+    <!-- TTS Card -->
+    <section class="card">
+      <div class="card-header">
+        <h2>🔊 Text to Speech</h2>
+      </div>
+      <div class="card-body">
+        <label for="ttsText">Teks:</label>
+        <textarea id="ttsText" rows="4" placeholder="Tulis teks yang ingin dibacakan...">Halo! Saya Bear Downloader, aplikasi webview dengan kemampuan text to speech bawaan browser dan Android.</textarea>
+        
+        <div class="tts-controls">
+          <button class="btn btn-success" id="ttsSpeak">▶️ Bicara</button>
+          <button class="btn btn-warning" id="ttsPause">⏸️ Jeda</button>
+          <button class="btn btn-danger" id="ttsStop">⏹️ Berhenti</button>
+        </div>
+        
+        <label for="ttsRate">Kecepatan: <span id="rateValue">1.0</span>x</label>
+        <input type="range" id="ttsRate" min="0.5" max="2" step="0.1" value="1">
+        
+        <label for="ttsVoice">Suara:</label>
+        <select id="ttsVoice"></select>
+      </div>
+    </section>
+
+    <!-- Info Card -->
+    <section class="card">
+      <div class="card-header">
+        <h2>ℹ️ Info</h2>
+      </div>
+      <div class="card-body">
+        <p><strong>Platform:</strong> <span id="platform">Web</span></p>
+        <p><strong>Mode:</strong> <span id="currentMode">Mobile</span></p>
+        <p><strong>Versi:</strong> 1.0.0</p>
+        <p><strong>TTS Available:</strong> <span id="ttsAvailable">Checking...</span></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/pull-to-refresh.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
