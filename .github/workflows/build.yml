@@ -47,6 +47,10 @@ jobs:
           cordova plugin add cordova-plugin-file@8.0.0
           cordova plugin add cordova-plugin-file-transfer@2.0.0
 
+      - name: Patch cordova.gradle for Gradle 9 compatibility
+        run: |
+          sed -i '1i import groovy.xml.XmlParser' platforms/android/CordovaLib/cordova.gradle || true
+
       - name: Build APK (debug)
         run: cordova build android --debug
 
@@ -94,6 +98,10 @@ jobs:
           cordova plugin add cordova-plugin-splashscreen@6.0.2
           cordova plugin add cordova-plugin-file@8.0.0
           cordova plugin add cordova-plugin-file-transfer@2.0.0
+
+      - name: Patch cordova.gradle for Gradle 9 compatibility
+        run: |
+          sed -i '1i import groovy.xml.XmlParser' platforms/android/CordovaLib/cordova.gradle || true
 
       - name: Build Release APK (unsigned)
         run: cordova build android --release
